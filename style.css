@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #020a0e;
+    padding: 10px;
+    width: 100.98%;
+    margin-left: -001%;
+    height: 5vw;
+    margin-top: -0.6vw;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /*alinhamento vertical*/
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.bar{
+    width: 25px;
+    height: 4px;
+    background-color: aliceblue;
+    margin: 18%;
+    border-radius: 20%;
+}
+
+.hamburguer-menu{
+    display: none;
+    cursor: pointer;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    gap: 3em;
+}
+
+.menu li a{
+    padding: 10px;
+    border-radius: 10%;
+    color: #92793a;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu li a:hover{
+    background-color: #92793a63;
+    font-weight: bold;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+section{
+    margin-top: 1.5rem;
+    margin-left: 0.5rem;
+}
+
+section p{
+    text-align: justify;
+}
+
+.conteudo{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    width: 95%;
+    gap: 5px;
+}
+
+img{
+   width: 100%;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    background-color: #020a0e;
+    width: 100.6%;
+    margin-left: -0.5rem;
+    padding: 2rem;
+    color: #d2dce6;
+}
+
+.container-footer{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+footer h3{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #92793a;
+    margin-bottom: 15px;
+}
+
+footer p{
+    color: #f2d680;
+}
+
+footer p:hover{
+    color: #6b5725;
+    cursor: pointer;
+}
+
+#icon{
+    font-size: 1.2rem;  
+    padding-right: 1rem; 
+    color: #f2d680;
+}
+
+#icon:hover{
+    color: #6b5725;
+    cursor: pointer;
+}
+
+@media (max-width: 728px){
+    header{
+        height: 12vw;
+    }
+    
+    .hamburguer-menu{
+        display: block;
+    }
+
+    .menu{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 10vw;
+        background-color: #020a0ec2;
+        font-weight: 500;
+        height: 80%;
+        width: 35vw;
+        padding: 1em;
+        margin-left: -2vw;
+    }
+
+    .menu li{
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .menu li a{
+        color: #92793a;
+        border-radius: 10%;
+        font-size: 1.2;
+    }
+
+    .menu li a:hover{
+        background-color: #92793a63;
+    }
+
+    .menu.ativo{
+        display: flex;
+        margin-top: 0;
+    }
+
+    section{
+        margin-top: 2rem;
+    }
+
+    .conteudo{
+        display: inline-block;
+    }
+
+    .container-footer{
+        display: inline-block;
+        text-align: center;
+        margin-top: 2rem;
+        bottom: 0;
+    }
+
+    .coluna{
+        margin-bottom: 30px;
+    }
+
+    footer{
+        position: relative;
+        top: 4rem;
+        text-align: center;
+        margin-left: 0.5rem;
+        width: 100%;
+        margin-left: 0;
+        bottom: 0;
+    }
+}
